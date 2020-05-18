@@ -44,5 +44,13 @@ Links útiles:
 +http://www.cse.scu.edu/~mwang2/projects/NLP_questionAnswering_16f.pdf
 
 
+Más links 
+Paper de SQUAD dataset 1.1
++ https://arxiv.org/pdf/1606.05250.pdf
 
+Overview de Q&A systems
++ https://www.researchgate.net/publication/320978810_An_Overview_of_Question_Answering_System
+
+Lista con diferentes datasets para reading compehersion
++ http://nlpprogress.com/english/question_answering.html
 
