@@ -54,3 +54,5 @@ Overview de Q&A systems
 Lista con diferentes datasets para reading compehersion
 + http://nlpprogress.com/english/question_answering.html
 
++ Analisis del dataset
+https://rajpurkar.github.io/mlx/qa-and-squad/
