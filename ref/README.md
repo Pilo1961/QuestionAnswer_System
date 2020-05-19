@@ -56,3 +56,6 @@ Lista con diferentes datasets para reading compehersion
 
 + Analisis del dataset
 https://rajpurkar.github.io/mlx/qa-and-squad/
+
++ InferSent paper
+https://research.fb.com/publications/supervised-learning-of-universal-sentence-representations-from-natural-language-inference-data/
