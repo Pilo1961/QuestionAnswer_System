@@ -25,3 +25,6 @@ Outputs:
 * train_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 * test_dict.pkl - Pickle con el embedding de las oaciones de los contextos de prueba
 * test_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
+
+# Model
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/SentenceEncoder.ipynb) Abrir en colab
