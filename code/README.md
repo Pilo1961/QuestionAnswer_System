@@ -59,3 +59,17 @@ Inputs:
 * train_target.pkl - Data frame que contiene 
 
 Outputs:
+* hyperparameters.pkl - Archivo con la información de los mejores parámetro encontrados en el magic loop
+* model.pkl - Modelo entrenado con los mejores parámetros
+
+# Prueba
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/TestData.ipynb) Abrir en colab
+
+En este notebook se replican las transformaciones que se le hacen a los datos de entrenamiento para los datos de prueba.
+Se hacen las predicciones con el modelo que mejor ajusta a los datos de entrenamiento.
+
+Inputs:
+* model.pkl - Modelo entrenado
+* dev-v1.0.json - Datos originales de prueba
+* test_dict.pkl - Embedding de contextos para los datos de prueba
+* test_question.pkl - Embedding de preguntas para los datos de prueba
