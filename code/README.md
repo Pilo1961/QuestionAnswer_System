@@ -26,5 +26,36 @@ Outputs:
 * test_dict.pkl - Pickle con el embedding de las oaciones de los contextos de prueba
 * test_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 
+# Processing
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Processing.ipynb) Abrir en colab
+
+Se genera la variable target, se calculan las distancias euclidiana y coseno a los datos.
+Se hace una predicción utlizando las distancias entre las oraciones.
+Se hace el análsis de raíz de las oracioens y se hace el df con el encoder de que oración tiene la misma raíz que las pregutnas.
+
+Inputs:
+* df_train.pkl - Data frame que contiene los datos de los contextos y las pregutnas
+* train_question.pkl - Embedding con la información de las preguntas
+* train_dict.pkl - diccionario que contiene el embedding de los contextos y las oraciones
+
+Output:
+* dist_cosine.pkl - Pickle que tiene las distancias coseno entre las preguntas y las oraciones del contexto 
+* dist_euclid.pkl - Pickle que tiene las distancias euclidianas entre las preguntas y las oraciones del contexto 
+* question_root.pkl - Pickle que tiene la palabra raíz de las preguntas
+* question_root.pkl - Pickle que contiene las palabras raíz de las oraciones
+* root_ohe.pkl - Pickle con el one hot encoder de la raices que coinciden entre oraciones y preguntas
+
 # Model
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/SentenceEncoder.ipynb) Abrir en colab
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Models.ipynb) Abrir en colab
+
+Se hacen transformaciones a los datos, se contruye la matriz de ML.
+Se corre un magic loop y se escoge el mejor modelo.
+Se presenta la matriz de confusión.
+
+Inputs:
+* root_ohe.pkl - Pickle que contiene el ohe de la raiz de las oraciones.
+* dist_euclid.pkl - Pickle con una lista que tiene las distancias euclidians entre la pregunta y las oraciones del contexto.
+* dist_cosine.pkl - Pickle con una lista que tiene las distancias coseno entre la pregunta y las oraciones del contexto.
+* train_target.pkl - Data frame que contiene 
+
+Outputs:
