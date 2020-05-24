@@ -8,7 +8,7 @@
 ***
 
 
-##  Análisis Exploratorio de los Datos
+##  1. Análisis Exploratorio de los Datos
 
 Read, explore and format data
 
@@ -22,25 +22,34 @@ Read, explore and format data
 * word2vec_cbow.okl - Pickle con modelo entrenado de word2Vec usando CBOW
 * word2vec_skipgram.okl - Pickle con modelo entrenado de word2Vec usando skip-gram
 
->Notebook asociado: `01. eda.ipynb`, mismo que se puede abrir dándole click aquí: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/01. eda.ipynb)
+>Notebook asociado: [`01. eda.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/01.%20eda.ipynb).
 
-## Embeddings [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/02. embeddings.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/01. eda.ipynb) Abrir en colab
+
+## 2. Embeddings
 
 Carga los datos y genera los embeddings de oraciones.
-Inputs:
+
+>Inputs:
+
 * df_train.pkl - Datos de entrenamiento
 * df_test.pkl - Datos de prueba
 * models.py - Modulo de funciones de InferSent
 * infersent1.pkl - Pickle de embedding de infersent
 * glove.840B.300d.txt - Embedding preentrenado GloVE
 
-Outputs:
+>Outputs:
+
 * train_dict.pkl - Pickle con el embedding de las oaciones de los contextos de entrenamiento
 * train_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 * test_dict.pkl - Pickle con el embedding de las oaciones de los contextos de prueba
 * test_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 
-## Processing
+>Notebook asociado: [`02. embeddings.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/02.%20embeddings.ipynb)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/02. embeddings.ipynb) Abrir en colab.
+
+## 3. Processing and featuring engenieering
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Processing.ipynb) Abrir en colab
 
 Se genera la variable target, se calculan las distancias euclidiana y coseno a los datos.
