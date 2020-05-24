@@ -23,7 +23,7 @@ Read, explore and format data
 * word2vec_cbow.okl - Pickle con modelo entrenado de word2Vec usando CBOW
 * word2vec_skipgram.okl - Pickle con modelo entrenado de word2Vec usando skip-gram
 
->Notebook asociado: [`01. eda.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/01.%20eda.ipynb).
+>Notebook asociado: [`01-eda.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/01-eda.ipynb).
 
 
 ## 2. Embeddings
@@ -45,7 +45,7 @@ Carga los datos y genera los embeddings de oraciones.
 * test_dict.pkl - Pickle con el embedding de las oaciones de los contextos de prueba
 * test_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 
->Notebook asociado: [`02. embeddings.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/02.%20embeddings.ipynb)
+>Notebook asociado: [`02-embeddings.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/02-embeddings.ipynb)
 
 ## 3. Processing and feature engineering
 
@@ -67,10 +67,9 @@ En el intermedio, implementamos un modelo no supervisado con las distancias cose
 * question_root.pkl - Pickle que contiene las palabras raíz de las oraciones
 * root_ohe.pkl - Pickle con el one hot encoder de la raices que coinciden entre oraciones y preguntas.
 
-> Notebook asociado:
+> Notebook asociado: [`03-processing.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/03-processing.ipynb)
 
 ## 4. Transform and Supervised Modelling 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Models.ipynb) Abrir en colab
 
 i) Transformaciones a los datos, se contruye la matriz de ML.
 Se corre un magic loop y se escoge el mejor modelo.
@@ -87,19 +86,23 @@ Se presenta la matriz de confusión.
 * hyperparameters.pkl - Archivo con la información de los mejores parámetro encontrados en el magic loop
 * model.pkl - Modelo entrenado con los mejores parámetros.
 
->Notebook asociado:
+>Notebook asociado:[`04-modelling.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/04-modelling.ipynb)
 
 ## 5. Prueba
+
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/TestData.ipynb) Abrir en colab
 
 En este notebook se replican las transformaciones que se le hacen a los datos de entrenamiento para los datos de prueba.
 Se hacen las predicciones con el modelo que mejor ajusta a los datos de entrenamiento.
 
-Inputs:
+>Inputs:
+
 * model.pkl - Modelo entrenado
 * dev-v1.0.json - Datos originales de prueba
 * test_dict.pkl - Embedding de contextos para los datos de prueba
 * test_question.pkl - Embedding de preguntas para los datos de prueba
+
+>Notebook asociado:[`05-testing.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/05-testing.ipynb)
 
 
 </div>
