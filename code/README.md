@@ -1,16 +1,30 @@
-# Read data
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/read_data.ipynb) Abrir en colab
+
+<div align='center'>
+  
+# Pipeline: Implementación del Sistema de Preguntas y Respuestas
+
+</div>
+
+***
+
+
+##  Análisis Exploratorio de los Datos
 
 Read, explore and format data
-inputs:
+
+>Inputs:
+
 * train-v1.0.json
-Output:
+
+>Output:
+
 * df_train.pkl - pickle with train data
 * word2vec_cbow.okl - Pickle con modelo entrenado de word2Vec usando CBOW
 * word2vec_skipgram.okl - Pickle con modelo entrenado de word2Vec usando skip-gram
 
-# Sentence embedding
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/SentenceEncoder.ipynb) Abrir en colab
+>Notebook asociado: `01. eda.ipynb`, mismo que se puede abrir dándole click aquí: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/01. eda.ipynb)
+
+## Embeddings [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/02. embeddings.ipynb)
 
 Carga los datos y genera los embeddings de oraciones.
 Inputs:
@@ -26,7 +40,7 @@ Outputs:
 * test_dict.pkl - Pickle con el embedding de las oaciones de los contextos de prueba
 * test_question.pkl - Pickle con el embedding de las preguntas de entrenamiento
 
-# Processing
+## Processing
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Processing.ipynb) Abrir en colab
 
 Se genera la variable target, se calculan las distancias euclidiana y coseno a los datos.
@@ -45,7 +59,7 @@ Output:
 * question_root.pkl - Pickle que contiene las palabras raíz de las oraciones
 * root_ohe.pkl - Pickle con el one hot encoder de la raices que coinciden entre oraciones y preguntas
 
-# Model
+## Model
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Models.ipynb) Abrir en colab
 
 Se hacen transformaciones a los datos, se contruye la matriz de ML.
@@ -62,7 +76,7 @@ Outputs:
 * hyperparameters.pkl - Archivo con la información de los mejores parámetro encontrados en el magic loop
 * model.pkl - Modelo entrenado con los mejores parámetros
 
-# Prueba
+## Prueba
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/TestData.ipynb) Abrir en colab
 
 En este notebook se replican las transformaciones que se le hacen a los datos de entrenamiento para los datos de prueba.
