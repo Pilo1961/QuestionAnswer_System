@@ -7,6 +7,7 @@
 
 ***
 
+<div align='justify'>
 
 ##  1. Análisis Exploratorio de los Datos
 
@@ -24,7 +25,6 @@ Read, explore and format data
 
 >Notebook asociado: [`01. eda.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/01.%20eda.ipynb).
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/01. eda.ipynb) Abrir en colab
 
 ## 2. Embeddings
 
@@ -47,45 +47,49 @@ Carga los datos y genera los embeddings de oraciones.
 
 >Notebook asociado: [`02. embeddings.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/02.%20embeddings.ipynb)
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/02. embeddings.ipynb) Abrir en colab.
+## 3. Processing and feature engineering
 
-## 3. Processing and featuring engenieering
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Processing.ipynb) Abrir en colab
+i) Generación de la variable target; ii) Calculo de las distancias euclidiana y coseno a los datos; iii) Análisis de raíz de las oraciones; iv) Definición del dataframe con el encoder que indica qué oración tiene la misma raíz que las preguntas.
 
-Se genera la variable target, se calculan las distancias euclidiana y coseno a los datos.
-Se hace una predicción utlizando las distancias entre las oraciones.
-Se hace el análsis de raíz de las oracioens y se hace el df con el encoder de que oración tiene la misma raíz que las pregutnas.
+En el intermedio, implementamos un modelo no supervisado con las distancias cosenos y euclidianas y generamos las primeras predicciones.
 
-Inputs:
+>Inputs:
+
 * df_train.pkl - Data frame que contiene los datos de los contextos y las pregutnas
 * train_question.pkl - Embedding con la información de las preguntas
 * train_dict.pkl - diccionario que contiene el embedding de los contextos y las oraciones
 
-Output:
+>Output:
+
 * dist_cosine.pkl - Pickle que tiene las distancias coseno entre las preguntas y las oraciones del contexto 
 * dist_euclid.pkl - Pickle que tiene las distancias euclidianas entre las preguntas y las oraciones del contexto 
 * question_root.pkl - Pickle que tiene la palabra raíz de las preguntas
 * question_root.pkl - Pickle que contiene las palabras raíz de las oraciones
-* root_ohe.pkl - Pickle con el one hot encoder de la raices que coinciden entre oraciones y preguntas
+* root_ohe.pkl - Pickle con el one hot encoder de la raices que coinciden entre oraciones y preguntas.
 
-## Model
+> Notebook asociado:
+
+## 4. Transform and Supervised Modelling 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/Models.ipynb) Abrir en colab
 
-Se hacen transformaciones a los datos, se contruye la matriz de ML.
+i) Transformaciones a los datos, se contruye la matriz de ML.
 Se corre un magic loop y se escoge el mejor modelo.
 Se presenta la matriz de confusión.
 
-Inputs:
+>Inputs:
+
 * root_ohe.pkl - Pickle que contiene el ohe de la raiz de las oraciones.
 * dist_euclid.pkl - Pickle con una lista que tiene las distancias euclidians entre la pregunta y las oraciones del contexto.
 * dist_cosine.pkl - Pickle con una lista que tiene las distancias coseno entre la pregunta y las oraciones del contexto.
 * train_target.pkl - Data frame que contiene 
 
-Outputs:
+>Outputs:
 * hyperparameters.pkl - Archivo con la información de los mejores parámetro encontrados en el magic loop
-* model.pkl - Modelo entrenado con los mejores parámetros
+* model.pkl - Modelo entrenado con los mejores parámetros.
 
-## Prueba
+>Notebook asociado:
+
+## 5. Prueba
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/TestData.ipynb) Abrir en colab
 
 En este notebook se replican las transformaciones que se le hacen a los datos de entrenamiento para los datos de prueba.
@@ -96,3 +100,6 @@ Inputs:
 * dev-v1.0.json - Datos originales de prueba
 * test_dict.pkl - Embedding de contextos para los datos de prueba
 * test_question.pkl - Embedding de preguntas para los datos de prueba
+
+
+</div>
