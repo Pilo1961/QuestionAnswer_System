@@ -89,9 +89,6 @@ Se presenta la matriz de confusión.
 >Notebook asociado:[`04-modelling.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/04-modelling.ipynb)
 
 ## 5. Prueba
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Pilo1961/QuestionAnswer_System/blob/master/code/TestData.ipynb) Abrir en colab
-
 En este notebook se replican las transformaciones que se le hacen a los datos de entrenamiento para los datos de prueba.
 Se hacen las predicciones con el modelo que mejor ajusta a los datos de entrenamiento.
 
@@ -99,8 +96,14 @@ Se hacen las predicciones con el modelo que mejor ajusta a los datos de entrenam
 
 * model.pkl - Modelo entrenado
 * dev-v1.0.json - Datos originales de prueba
+* df_test.pkl
 * test_dict.pkl - Embedding de contextos para los datos de prueba
 * test_question.pkl - Embedding de preguntas para los datos de prueba
+
+Outputs:
+* root_ohe_test.pkl - Pickle que contiene el ohe de la raiz de las oraciones.
+* dist_euclid_test.pkl - Pickle con una lista que tiene las distancias euclidians entre la pregunta y las oraciones del contexto.
+* dist_cosine_test.pkl - Pickle con una lista que tiene las distancias coseno entre la pregunta y las oraciones del contexto.
 
 >Notebook asociado:[`05-testing.ipynb`](https://github.com/Pilo1961/QuestionAnswer_System/blob/master/code/05-testing.ipynb)
 
