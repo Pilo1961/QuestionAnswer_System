@@ -16,6 +16,12 @@ El presente repositorio contiene la implementación de un sistema de preguntas y
 
     .
     ├── code.                      # notebooks y código autocontenidos
+    |   ├── 01-eda.ipynb
+    │   ├── 02-embeddings.ipynb       
+    │   ├── 03-processing.ipynb      
+    │   ├── 04-modelling.ipynb 
+    |   ├── 05-testing.ipynb  
+    │   └── README.md 
     ├── data                       # instrucciones para conseguir los datos empleados en la elaboración del proyecto
     ├── imag                       # imágenes asociadas al proyecto
     ├── refs                       # referencias empleadas
