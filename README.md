@@ -8,7 +8,7 @@
 
 <div align='justify'>
 
-El presente repositorio contiene la implementación de un sistema de preguntas y respuestas- delimitado a la comprehensión de lectura; dicha implementación que fue desarrollada en el marco del trabajo final de la clase de Métodos Análiticos, impartida por Felipe González, en el ITAM, México. 
+El presente repositorio contiene la implementación de un sistema de preguntas y respuestas- delimitado a la comprehensión de lectura; dicha implementación fue desarrollada en el marco del trabajo final de la clase de Métodos Análiticos, impartida por Felipe González, en el ITAM, México. 
 
 
 ### Contenidos de sitio:
