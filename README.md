@@ -15,11 +15,11 @@ El presente repositorio contiene la implementación de un sistema de preguntas y
 
 
     .
-    ├── code.                      # notebooks autcontenidos
+    ├── code.                      # notebooks y código autocontenidos
     ├── data                       # instrucciones para conseguir los datos empleados en la elaboración del proyecto
     ├── imag                       # imágenes asociadas al proyecto
     ├── refs                       # referencias empleadas
-    ├── report                     # reporte final generado en latex
+    ├── report                     # reporte final generado en latex y presentación del proyecto
     └── README                     # información general del proyecto
 
 
